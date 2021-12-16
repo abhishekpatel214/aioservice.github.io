@@ -1,14 +1,18 @@
+<?php
 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>AIOservice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
 </head>
 <body>
 
-<?php require 'other/nav.php' ?>
+<?php require 'other/nav.php' 
+?>
 
 
          
@@ -19,8 +23,17 @@
                 <div class="page-header">
                     <h2>Registration</h2>
                 </div>
+
+                <?php
+                if(isset($_SESSION['status']))
+                {
+                        echo "h4".$_SESSION['status']."/h4>";
+                        unset($_SESSION['status']);
+                }
                 
-                <form action="" method="post">
+                ?>
+
+                <form action="customer\insert.php" method="post">
 
                     <div class="form-group">
                         
@@ -54,12 +67,12 @@
  
                     <div class="form-group">
                         
-                        <input type="password" name="cpassword" placeholder="Confirm Password" class="form-control" value="" maxlength="8" required="">
+                        <input type="password"  placeholder="Confirm Password">
                         
                     </div>
                     <br>
                     <div>
-                    <input type="submit" class="btn btn-primary" name="signup" value="submit">
+                    <input type="submit" class="btn btn-primary" name="savedata" value="submit">
                     </div>
                     Already have a account?<a href="login.php" class="btn btn-default">Login</a>
                 </form>

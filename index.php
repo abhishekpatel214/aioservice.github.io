@@ -4,21 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>AIOservice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css\index.css" rel="stylesheet">
 </head>
 <body>
 <?php require 'other/nav.php' ?>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-50" src="other\Portada-Customer-Service-Roadmap.jpg" alt="First slide">
-  </div>
-  <div class="carousel-item active">
-    <p style="background-color: black;"></p>
-  </div>
+<div class="container" data-ride="carousel">
+  <div class="container">
+    <div class="container">
+      <img class="slider" src="images\full.png" alt="First slide">
+      <div class="citysearch" >
+       <p>Where You Need Service??</p> 
+
+       <input type="text" name="city" list="cityname" placeholder="Select Your City">
+       <datalist id="cityname">
+      <option value="Gandhinagar">
+      <option value="Ahmedabad">
+      <option value="Surat">
+      <option value="Vadodra">
+      <option value="Godhra">
+      <option value="Rajkot">
+      <option value="Bhavnagar">
+      <option value="Jamnagar">
+      <option value="Patan">
+      <option value="Kalol">
+    </datalist>
+      </div>
+      </div>
 </div>
-
-
-
+<div  class="container" data-ride="carousel">
+  <div class="container">
+    <div class="container">
+      <img class="d-block w-100 H-35" src="images\midel.png" alt="First slide">
+      </div>
+</div>
 </body>
 </html>
