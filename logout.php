@@ -1,13 +1,10 @@
-$sql= " select * from customer where (cust_email='$cust_email' or cust_mobile='$cust_mobile');";
-     $res=mysqli_query($dbc,$sql);
-     if (mysqli_num_row($res) > 0){
-       $row = mysqli_fetch_assoc($res);
-
-       if($cust_email==$row['cust_email'])
-       {
-         $error[] = 'Email alredy Exits';
-       }
-       if($cust_mobile==$row['cust_mobile'])
-       {
-         $error[] = 'Number alredy Exits';
-       }
+<?php   
+session_start(); //to ensure you are using same session
+session_destroy(); //destroy the session
+ //to redirect back to "index.php" after logging out
+ echo ("<script LANGUAGE='JavaScript'>
+ window.alert('Logout Successfully!!');
+ window.location.href='login.php';
+ </script>");
+exit();
+?>
